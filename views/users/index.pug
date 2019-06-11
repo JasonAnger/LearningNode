@@ -1,0 +1,18 @@
+extends ../layouts/common
+
+block content
+    h1 Users
+    table.table
+        tr
+            th Name 
+            th Phone
+            th ID 
+            th 
+        
+        each user in users
+            tr
+                td=user.name
+                td=user.phone
+                td=user.id
+                td
+                   a(href='/users/'+user.id) View

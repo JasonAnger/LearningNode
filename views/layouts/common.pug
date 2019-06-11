@@ -1,0 +1,20 @@
+html   
+    head
+        link(rel="stylesheet",
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css",
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T",
+        crossorigin="anonymous")
+        
+    body 
+        ul.nav.nav-pills
+            li.nav-item
+                a.nav-link.active(href='/') Home
+            li.nav-item
+                a.nav-link(href='/users') Users
+            li.nav-item
+                a.nav-link(href='/users/create') Create
+            form(action="/users/search")
+            input(type="text",name="q")
+            button.btn.btn-primary(type='submit') Search
+
+        block content 
